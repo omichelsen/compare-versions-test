@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Compare Versions</title>
+	</head>
+	<body>
+		<script src=./node_modules/compare-versions/lib/umd/index.js></script>
+		<script>
+			const { compareVersions, compare, satisfies, validate } = window.compareVersions
+			console.log(compareVersions('11.0.0', '10.0.0'))
+			console.log(compare('11.0.0', '10.0.0', '>'))
+			console.log(validate('11.0.0'))
+			console.log(satisfies('1.2.0', '^1.0.0'))
+		</script>
+	</body>
+</html>

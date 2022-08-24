@@ -1,0 +1,14 @@
+{
+	"name": "cjs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"compare-versions": "^5.0.1"
+	}
+}
