@@ -5,13 +5,28 @@
 		<title>Compare Versions</title>
 	</head>
 	<body>
+		<h1>UMD</h1>
+		<pre id="umd"></pre>
+		<h1>ESM</h1>
+		<pre id="esm"></pre>
 		<script src=./node_modules/compare-versions/lib/umd/index.js></script>
 		<script>
 			const { compareVersions, compare, satisfies, validate } = window.compareVersions
-			console.log(compareVersions('11.0.0', '10.0.0'))
-			console.log(compare('11.0.0', '10.0.0', '>'))
-			console.log(validate('11.0.0'))
-			console.log(satisfies('1.2.0', '^1.0.0'))
+			document.querySelector('#umd').innerHTML = `
+				compareVersions('11.0.0', '10.0.0')):\t${compareVersions('11.0.0', '10.0.0')}
+				compare('11.0.0', '10.0.0', '>')):\t${compare('11.0.0', '10.0.0', '>')}
+				validate('11.0.0')):\t\t\t${validate('11.0.0')}
+				satisfies('1.2.0', '^1.0.0')):\t\t${satisfies('1.2.0', '^1.0.0')}
+			`
+		</script>
+		<script type="module">
+			import { compareVersions, compare, satisfies, validate } from './node_modules/compare-versions/lib/esm/index.js'
+			document.querySelector('#esm').innerHTML = `
+				compareVersions('11.0.0', '10.0.0')):\t${compareVersions('11.0.0', '10.0.0')}
+				compare('11.0.0', '10.0.0', '>')):\t${compare('11.0.0', '10.0.0', '>')}
+				validate('11.0.0')):\t\t\t${validate('11.0.0')}
+				satisfies('1.2.0', '^1.0.0')):\t\t${satisfies('1.2.0', '^1.0.0')}
+			`
 		</script>
 	</body>
 </html>

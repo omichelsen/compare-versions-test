@@ -1,14 +1,13 @@
 {
-	"name": "cjs",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"main": "index.html",
 	"scripts": {
-		"start": "node index.js"
+		"start": "serve"
 	},
-	"author": "",
+	"author": "Ole Michelsen",
 	"license": "ISC",
+	"private": true,
 	"dependencies": {
-		"compare-versions": "^5.0.1"
+		"compare-versions": "^6.1.0",
+		"serve": "^14.2.3"
 	}
 }

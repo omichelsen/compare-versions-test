@@ -1,7 +1,4 @@
 {
-	"name": "cjs",
-	"version": "1.0.0",
-	"description": "",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
@@ -10,6 +7,6 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"compare-versions": "^5.0.1"
+		"compare-versions": "^6.1.0"
 	}
 }
